@@ -1,6 +1,6 @@
 {
     "name": "doowebdev/doo-csrf",
-    "description": "A simple token generator helper to prevent csrf",
+    "description": "Doo csrf is a simple, easy to use random token generator for PHP Scripts to prevent csrf - cross site request forgery.",
     "minimum-stability": "stable",
     "homepage": "https://github.com/doowebdev/doo-csrf",
     "keywords": ["csrf","cross site request forgery","session"],
