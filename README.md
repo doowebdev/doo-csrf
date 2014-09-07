@@ -61,9 +61,9 @@ class SomeclassController extends BaseController {
 
 }
 
-
+```
 ** In your view add the $token variable in a hidden input within your form, example:**
-
+```
 <form action="your/path" method="post">
 
 <label> someTitle</label>
