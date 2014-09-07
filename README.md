@@ -5,7 +5,7 @@ Doo csrf is a simple token generator to prevent csrf - cross site request forger
 
 Installation -
 ============
-To install latest version simply add it to your "require" composer.json:
+To install the latest version of Doo csrf simply add it to your composer.json file in the require section:
 
 ```
 "doowebdev/doo-csrf": "dev-master"
@@ -13,8 +13,9 @@ To install latest version simply add it to your "require" composer.json:
 
 Once the package is installed, you need to initialize the Token class:
 
+```
 require 'vendor/autoload.php';
 
 use DooCSRF\Token;
 
-
+```
