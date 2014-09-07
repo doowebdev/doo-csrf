@@ -58,7 +58,7 @@ class SomeclassController extends BaseController {
      
      public function someMethod(){
      
-           View::display('path/to/a/view', $this->data );//the token variable is past through to the view via the                                                                    $this->data array.
+           View::display('path/to/a/view', $this->data );//the token variable is past through to the view via the $this->data array.
      }
 
 
@@ -82,7 +82,7 @@ In your view add the $token variable in a hidden input within your form, example
 
 ```
 
-And in the controller or file that will recieve the post data:
+And in a controller method or file that will recieve the post data:
 
 ```PHP
 use DooCSRF\Token; 
