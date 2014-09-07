@@ -1,7 +1,7 @@
 Doo-CSRF - 
 ========
 
-Doo csrf is a simple token generator to prevent csrf - cross site request forgery.
+Doo csrf is a simple token generator for PHP Scripts to prevent csrf - cross site request forgery.
 
 Installation -
 ============
