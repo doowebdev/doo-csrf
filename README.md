@@ -19,3 +19,64 @@ require 'vendor/autoload.php';
 use DooCSRF\Token;
 
 ```
+
+How to Use -
+==========
+Assuming you are using php classes in your application (you can also use in php procedural code), use the following as an example:
+
+In your base controller:
+
+```
+
+use DooCSRF\Token;
+
+
+class BaseController{
+
+     
+      protected $data = []; // assign $data to an empty array.
+
+      
+      public function __construct(){
+      
+           
+          //assign the token static method to a varibale, in this case it's the token variable create by the data array
+           $this->data['token'] = Token::generate();
+      
+      }
+
+}
+
+
+
+
+class SomeclassController extends BaseController {
+
+     
+     public function someMethod(){
+     
+           View::display('path/to/a/view', $this->data );//the token variable is past through to the view via the                                                                    $this->data array.
+     }
+
+
+}
+
+
+** In your view add the $token variable in a hidden input within your form, example:**
+
+<form action="your/path" method="post">
+
+<label> someTitle</label>
+<input type="text" name ="someName">
+
+<input type="hidden" name="token" value="{{ token }}"> 
+<!-- if you using a template engine like Twig, wrap it in the template brackets ( or whatever is given), if not use good old php <?php echo $token; ?> -->
+
+<button type="submit"></button>
+
+</form>
+
+
+
+
+```
