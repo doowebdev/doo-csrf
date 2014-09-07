@@ -26,7 +26,7 @@ Assuming you are using php classes in your application (you can also use in php 
 
 In your base controller:
 
-```
+```PHP
 
 use DooCSRF\Token;
 
