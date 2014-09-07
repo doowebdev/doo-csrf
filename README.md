@@ -1,7 +1,7 @@
 Doo-CSRF - 
 ========
 
-Doo csrf is a simple token generator for PHP Scripts to prevent csrf - cross site request forgery.
+Doo csrf is a simple random token generator for PHP Scripts to prevent csrf - cross site request forgery.
 
 Installation -
 ============
@@ -17,6 +17,15 @@ Once the package is installed, you need to initialize the Token class:
 require 'vendor/autoload.php';
 
 use DooCSRF\Token;
+
+```
+
+The static methods used to generate and check the random token:
+```PHP 
+
+Token::generate(); //Generates a random token string.
+
+Token::check( PLACE-$_POST-NAME-HERE );// Checks if random token is valid.
 
 ```
 
