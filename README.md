@@ -13,7 +13,7 @@ To install the latest version of Doo csrf simply add it to your composer.json fi
 
 Once the package is installed, you need to initialize the Token class:
 
-```
+```PHP
 require 'vendor/autoload.php';
 
 use DooCSRF\Token;
@@ -57,7 +57,8 @@ class SomeclassController extends BaseController {
 
 ```
 In your view add the $token variable in a hidden input within your form, example:
-```
+
+```HTML
 <form action="/path/to/post/route/or/url" method="post">
 
 <label> someTitle</label>
@@ -74,7 +75,7 @@ In your view add the $token variable in a hidden input within your form, example
 
 And in the controller or file that will recieve the post data:
 
-```
+```PHP
 use DooCSRF\Token; 
 
 if( Token::check( $_POST['token'] ) ){
