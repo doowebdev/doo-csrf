@@ -80,8 +80,7 @@ use DooCSRF\Token;
 
 if( Token::check( $_POST['token'] ) ){
 
-     //Do somthing. Do database inserts etc..
-     (code placed here is protected)
+     //Protected area. Do somthing,  database inserts etc..
 }
 
 ```
