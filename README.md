@@ -30,24 +30,18 @@ In your base controller:
 
 use DooCSRF\Token;
 
-
 class BaseController{
-
      
       protected $data = []; // assign $data to an empty array.
 
-      
       public function __construct(){
       
-           
           //assign the token static method to a varibale, in this case it's the token variable create by the data array
            $this->data['token'] = Token::generate();
       
       }
 
 }
-
-
 
 
 class SomeclassController extends BaseController {
@@ -84,9 +78,11 @@ And in the controller or file that will recieve the post data:
 use DooCSRF\Token; 
 
 if( Token::check( $_POST['token'] ) ){
-     //Do somthing
+
+     //Do somthing. Do database inserts etc..
+     (code placed here is protected from csrf)
 }
 
 ```
 
-### Thats it! your application it protected from csrf
+### Thats it, nice and easy!
