@@ -62,9 +62,9 @@ class SomeclassController extends BaseController {
 }
 
 ```
-** In your view add the $token variable in a hidden input within your form, example:**
+In your view add the $token variable in a hidden input within your form, example:
 ```
-<form action="your/path" method="post">
+<form action="/path/to/post/route/or/url" method="post">
 
 <label> someTitle</label>
 <input type="text" name ="someName">
@@ -76,7 +76,17 @@ class SomeclassController extends BaseController {
 
 </form>
 
+```
 
-
+And in the controller or file that will recieve the post data:
 
 ```
+use DooCSRF\Token; 
+
+if( Token::check( $_POST['token'] ) ){
+     //Do somthing
+}
+
+```
+
+### Thats it! your application it protected from csrf
