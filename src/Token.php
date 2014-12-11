@@ -15,7 +15,7 @@ class Token {
     {
         $token_name = 'token';
 
-        if(Session::exists($token_name) && $token == Session::get($token_name) )
+        if(Session::exists($token_name) && $token == Session::exists($token_name) )
         {
             Session::delete($token_name);
             return true;
